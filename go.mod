@@ -1,4 +1,4 @@
-module github.com/crashappsec/go-utils
+module github.com/crashappsec/go-log
 
 go 1.21
 

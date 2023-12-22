@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/thessem/zap-prettyconsole"
+	prettyconsole "github.com/thessem/zap-prettyconsole"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )
