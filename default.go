@@ -3,19 +3,17 @@ package log
 import (
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
-
-	"github.com/crashappsec/go-log"
 )
 
-var defaultLogger *log.Logger
+var defaultLogger *Logger
 
 func init() {
-	defaultLogger = log.NewLogger().WithOptions(
+	defaultLogger = NewLogger().WithOptions(
 		zap.AddCallerSkip(1), // default logger needs to skip one more caller
 	)
 }
 
-func With(fields ...zap.Field) *log.Logger {
+func With(fields ...zap.Field) *Logger {
 	return defaultLogger.With(fields...)
 }
 
