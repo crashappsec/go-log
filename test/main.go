@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/crashappsec/go-log"
+	"github.com/crashappsec/go-log/src/log"
 )
 
 func main() {
@@ -11,7 +11,10 @@ func main() {
 	parent.Info("parent logger")
 	parent.Info("parent logger", log.String("test", "parent"))
 
-	child := parent.With(log.String("test", "cHiLd"), log.String("hello", "world"))
+	child := parent.With(
+		log.String("test", "cHiLd"),
+		log.String("hello", "world"),
+	)
 	child.Info("child log")
 	child.Info("child log", log.String("test", "child"))
 
