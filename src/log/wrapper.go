@@ -39,6 +39,10 @@ func Int64(key string, val int64) zap.Field {
 	return zap.Int64(key, val)
 }
 
+func Float64(key string, val float64) zap.Field {
+	return zap.Float64(key, val)
+}
+
 func Time(key string, val time.Time) zap.Field {
 	return zap.Time(key, val)
 }
